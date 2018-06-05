@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
+        <link rel="stylesheet" href="/0ece6386790f45e045a6093e7ed9db0a.css">
+        <link rel="stylesheet" href="/5d571321c2c26f65bc3d4f97f9550eb0.css">
+ 
+        <title>Test title</title>
+    <script src="/normalize.7ed9db0a.js"></script><script src="/main.f9550eb0.js"></script></head>
+    <body>
+            <form name="workersForm">
+                    <input type="text" placeholder="Imię" name="imie">
+                    <input type="text" placeholder="Nazwisko" name="surname">
+                    <input type="text" placeholder="Płeć" name="sex">
+                    
+                    <input type="text" placeholder="Płaca" name="salary">
+                    <input type="text" placeholder="Staż" name="jobSeniority">
+                    <input type="text" placeholder="Ulica" name="street">
+
+                    <input type="submit">
+                    <input type="button" class="edit" value="edit" data-id="{{id}}">
+            </form>
+                   
+         
+            <script id="workers-template" type="text/x-handlebars-template">
+                <table border="1">
+                    <tr>
+                        <th>ID</th>
+                        <th>Imie</th>
+                        <th>Nazwisko</th>
+                        <th>Płeć</th>
+                        <th>Ulica</th>
+                        <th>Nr domu</th>
+                        <th>Nr mieszkania</th>
+                        <th>Kod pocztowy</th>
+                        <th>Miasto</th>
+                        <th>Wyplata</th>
+                        <th>Staż pracy</th>
+                    </tr>
+                    <tbody id="fakeEmployees">
+                        {{#each .}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{name}}</td>
+                            <td>{{surname}}</td>
+                            <td>{{sex}}</td>
+                            <td>{{address.street}}</td>
+                            <td>{{address.streetNumber}}</td>
+                            <td>{{address.apartmentNumber}}</td>
+                            <td>{{address.zipcode}}</td>
+                            <td>{{address.city}}</td>
+                            <td>{{salary}}</td>
+                            <td>{{jobSeniority}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+               </script>
+            <div id="kontener"></div>
+               
+       
+
+      <script src="/c7cf38924cab078f3ce1c96a5f4b6295.js"></script>
+    </body>
+</html>
